@@ -52,11 +52,11 @@ public class IndexController {
     //Rest endpoint: Update data from the server.
     @PutMapping(path = "{indexId}") 
     public void updateIndex(
-            @PathVariable("indexId") Long indexId,
-            @RequestParam(required = false) String ticker,
-            @RequestParam(required = false) String description) {
+        @PathVariable("indexId") Long indexId,
+        @RequestParam(required = false) String ticker,
+        @RequestParam(required = false) String description) {
 
-                indexService.updateIndex(indexId, ticker, description);
+            indexService.updateIndex(indexId, ticker, description);
     }
 
 }
