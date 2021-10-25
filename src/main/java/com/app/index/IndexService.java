@@ -15,10 +15,14 @@ public class IndexService {
 
     private final IndexRepository indexRepository;
 
-    @Autowired //IndexRepository is autowired for Rest. indexRepository is auto-instantiated/injected into the constructor.
+    //IndexRepository is autowired for Rest.
+    //indexRepository is auto-instantiated/injected into the constructor.
+    @Autowired
     public IndexService(IndexRepository indexRepository) {
         this.indexRepository = indexRepository;
-        //this.indexRepository = new indexRepository(); //to be avoided, insteand use dependency injection.
+        
+        //to be avoided, insteand use dependency injection.
+        //this.indexRepository = new indexRepository(); 
     } 
 
     public List<Index> getAllIndices() {
@@ -57,7 +61,7 @@ public class IndexService {
             
         if (description != null && 
         description.length() > 0 && 
-                !Objects.equals(index.getDescription(), index)) {
+                !Objects.equals(index.getDescription(), description)) {
             index.setDescription(description);
         }
 

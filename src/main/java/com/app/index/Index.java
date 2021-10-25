@@ -5,7 +5,8 @@ import javax.persistence.*;
 @Entity //Annotation to map Student class to database for Hibernate.
 @Table //Annotation to declare the class as table for the database.
 public class Index {
-    @Id //Auto-generate values in column Id for variable id. Part of DB configuration.
+    //Auto-generate values in column Id for variable id. Part of DB configuration.
+    @Id
     @SequenceGenerator(
         name = "index_sequence",
         sequenceName = "index_sequence",
@@ -25,7 +26,6 @@ public class Index {
     //Annotation means variable age doesn't need to become a table column.
     //It will be calculated at runtime.
     // @Transient
-    // private Integer age;
 
     public Index() {
     }
