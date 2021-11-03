@@ -2,7 +2,7 @@ package com.app.index;
 
 import javax.persistence.*;
 
-@Entity //Annotation to map Student class to database for Hibernate.
+@Entity //Annotation to map Index class to database for Hibernate.
 @Table //Annotation to declare the class as table for the database.
 public class Index {
     //Auto-generate values in column Id for variable id. Part of DB configuration.
