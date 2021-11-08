@@ -9,7 +9,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-//SERVICE LAYER (business logic to manage students).
+//SERVICE LAYER (business logic to manage indices).
 @Service
 public class IndexService {
 
