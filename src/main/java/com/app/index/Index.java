@@ -23,7 +23,7 @@ public class Index {
     private float changePercentage;
     private float changeValue;
     
-    //Annotation means variable age doesn't need to become a table column.
+    //Annotation means the variable doesn't need to become a table column.
     //It will be calculated at runtime.
     // @Transient
 
