@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 public interface IndexRepository extends JpaRepository<Index, Long> {
     
     //JPQL language: SELECT * FROM student WHERE email = ?
-    @Query("SELECT s FROM Index s WHERE s.ticker = ?1") 
+    @Query("SELECT i FROM Index i WHERE i.ticker = ?1") 
     Optional<Index> findIndexByTicker(String ticker);
 
 }
