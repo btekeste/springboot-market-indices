@@ -11,16 +11,16 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(path = "api/v1/index")
 public class IndexController {
 
-     //Spring Bean.
+     //Spring Bean
     private final IndexService indexService;
 
-    //IndexService is autowired for Rest. 
-    //IndexService is auto-instantiated/injected into the constructor.
+    //IndexService is autowired for Rest
+    //IndexService is auto-instantiated/injected into the constructor
     @Autowired
     public IndexController(IndexService indexService) {
         this.indexService = indexService;
 
-        //Below statement to be avoided, insteand use dependency injection.
+        //Below statement to be avoided, insteand use dependency injection
         //this.indexService = new indexService();
     }
 
@@ -30,26 +30,26 @@ public class IndexController {
         return indexService.getAllIndices();
 	}
 
-    //Rest endpoint: Get data from the server.
+    //Rest endpoint: Get data from the server
     @GetMapping(path = "{indexId}")
 	public Optional<Index> getSingleIndex(@PathVariable("indexId") Long indexId) {
         return indexService.getSingleIndex(indexId);
 	}
 
-    //Rest endpoint: Post data to the server.
-    //Take response body and map it into a student object.
+    //Rest endpoint: Post data to the server
+    //Take response body and map it into an index object
     @PostMapping
     public void addNewIndex(@RequestBody Index index) {    
         indexService.addNewIndex(index);
     }
 
-    //Rest endpoint: Delete data from the server.
+    //Rest endpoint: Delete data from the server
     @DeleteMapping(path = "{indexId}")
     public void deleteIndex(@PathVariable("indexId") Long indexId) {
         indexService.deleteIndex(indexId);
     }
     
-    //Rest endpoint: Update data from the server.
+    //Rest endpoint: Replace data from the server
     @PutMapping(path = "{indexId}") 
     public void updateIndex(
         @PathVariable("indexId") Long indexId,
