@@ -22,15 +22,15 @@ public class IndexConfig {
                 0.56f,
                 24.96f
             );
-            Index DJID = new Index(
-                "DJID",
+            Index DJI = new Index(
+                "DJI",
                 "DOW JONES INDUSTRIAL AVERAGE INDEX",
                 35186.45f,
                 0.78f,
                 273.88f
             );
-            Index NDXD = new Index(
-                "DJID",
+            Index NDX = new Index(
+                "NDX",
                 "NASDAQ 100 INDEX",
                 15095.84f,
                 0.29f,
