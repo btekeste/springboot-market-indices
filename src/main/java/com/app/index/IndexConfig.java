@@ -55,7 +55,7 @@ public class IndexConfig {
 
              //Hibernate is invoked to insert into DB.
             repository.saveAll(
-                List.of(SPX, DJID, NDXD, RUI,NYA)
+                List.of(SPX, DJI, NDX, RUI,NYA)
             );
         };
     }
